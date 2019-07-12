@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import 'skeleton-css/css/normalize.css';
-// import 'skeleton-css/css/skeleton.css';
 import './App.css';
 import {
   handleInput,
@@ -15,15 +13,17 @@ import {
   
 } from './methods';
 import FormLogin from './components/FormLogin.js'
+import TypingIndicator from './components/TypingIndicator.js'
 import RoomList from './components/RoomList.js'
 import UserLogin from './components/UserLogin.js'
 import UserList from './components/UserList.js'
 // import UserLogout from './components/UserLogout.js'
 import TitleRoom from './components/TitleRoom.js'
 import ChatSession from './components/ChatSession.js'
+import InputMessage from './components/InputMessage.js'
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPaperPlane,faSignOutAlt,faEllipsisH} from '@fortawesome/free-solid-svg-icons'
+import {faSignOutAlt,faEllipsisH} from '@fortawesome/free-solid-svg-icons'
 import ScrollToBottom from 'react-scroll-to-bottom';
 
 class App extends Component {
@@ -113,7 +113,7 @@ class App extends Component {
                 {//show [icon typing] when user is typing.
                   typingUsers.map(typingUser=>{
                     if((typingUser.isTyping === true ) && (typingUser.roomId === currentRoom.id)){
-                      return <li className="message-receiver typing-indicator"><div><FontAwesomeIcon icon={faEllipsisH}/></div></li>
+                      return <TypingIndicator/>
                     }
                   })
                 }
@@ -121,17 +121,7 @@ class App extends Component {
           </ScrollToBottom>  
 
           <footer className="chat-footer">
-            <form onSubmit={this.sendMessage} className="message-form">
-              <input
-                type="text"
-                value={newMessage}
-                name="newMessage"
-                className="message-input"
-                placeholder="Type your message and hit ENTER to send"
-                onChange={this.handleInputMessage}
-              />
-              <Button variant="info" type="submit"><FontAwesomeIcon icon={faPaperPlane}></FontAwesomeIcon></Button>
-            </form>
+            <InputMessage newMessage={newMessage} currentUser={currentUser} currentRoom={currentRoom} sendMessage={this.sendMessage} handleInputMessage={this.handleInputMessage}/>
           </footer>
 
         </section>
