@@ -4,6 +4,8 @@ import {faCircle,faUserFriends,faCommentDots} from '@fortawesome/free-solid-svg-
 import Proptypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import RoomType from './RoomType';
+import RoomMember from './RoomMember'
+
 const UserList = props => {
 
     const { chatUsers, currentUser ,sendDM } = props;
@@ -60,7 +62,7 @@ const UserList = props => {
         <div>
       
             <header className="user-header">
-                <h6><FontAwesomeIcon icon={faUserFriends} /> Room Members ({totalMember})</h6>
+                <RoomMember totalMember={totalMember}/>
             </header>
 
             <ul>
