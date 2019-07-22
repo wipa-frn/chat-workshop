@@ -17,7 +17,7 @@ import TypingIndicator from './components/TypingIndicator.js'
 import RoomList from './components/RoomList.js'
 import UserLogin from './components/UserLogin.js'
 import UserList from './components/UserList.js'
-// import UserLogout from './components/UserLogout.js'
+import UserLogout from './components/UserLogout.js'
 import TitleRoom from './components/TitleRoom.js'
 import ChatSession from './components/ChatSession.js'
 import InputMessage from './components/InputMessage.js'
@@ -96,7 +96,6 @@ class App extends Component {
             ) : null }
 
             <footer className="bottom-footer">
-              {/* <UserLogout logoutUser={logoutUser} currentUser={currentUser}/> */}
               <Button  onClick={() => this.setState({ showLogin : logoutUser(currentUser,showLogin)})} size="lg">Log out <FontAwesomeIcon icon={faSignOutAlt} /></Button>
             </footer>
           </aside>

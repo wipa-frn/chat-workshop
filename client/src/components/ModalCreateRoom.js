@@ -131,7 +131,7 @@ class ModalCreateRoom extends React.Component {
               <Modal.Body>
               
                 <Form.Group >
-                  <Form.Label>User Name</Form.Label>
+                  <Form.Label>Room Name</Form.Label>
                   <Form.Control type="text" placeholder="Room Name" name="roomName" value={this.state.roomName} onChange={this.handleInput} />
                 </Form.Group>
                 <Form.Group>
