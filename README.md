@@ -16,5 +16,5 @@ chat-workshop - Coop 2019
 
 ```npm start```
 
-**Storybook**
+**Storybook**<br>
 ```npm run storybook```
