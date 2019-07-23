@@ -1,17 +1,20 @@
 # chat-workshop React
 chat-workshop - Coop 2019
 
-Use Pusher Chatkit API
-Storybook
+* Use Pusher Chatkit API
+* Storybook
 
-**server**
-./chat-workshop <br>
--npm install <br>
--node server.js <br>
+**Server**
+ ./chat-workshop <br>
+```npm install```
 
-**client**
-./chat-workshop/client <br>
--npm install <br>
--npm start  <br>
+```node server.js```
 
--npm run storybook <br>
+**Client**
+ ./chat-workshop/client <br>
+```npm install```
+
+```npm start```
+
+**Storybook**
+```npm run storybook```
