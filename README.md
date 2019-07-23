@@ -2,11 +2,16 @@
 chat-workshop - Coop 2019
 
 Use Pusher Chatkit API
+Storybook
 
-In directory 'chat-workshop' <br>
--npm install<br>
--node server.js<br>
+**server**
+./chat-workshop <br>
+-npm install <br>
+-node server.js <br>
 
-In directory 'chat-workshop/client'<br>
--npm install<br>
--npm start  
+**client**
+./chat-workshop/client <br>
+-npm install <br>
+-npm start  <br>
+
+-npm run storybook <br>
